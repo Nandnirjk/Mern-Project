@@ -63,6 +63,8 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
+// server.js mein is line ko change karein:
+app.use('/auth', require('./routes/auth')); // '/api/auth' ki jagah '/auth'
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
